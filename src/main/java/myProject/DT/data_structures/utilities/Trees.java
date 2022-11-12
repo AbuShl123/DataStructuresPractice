@@ -1,10 +1,40 @@
 package myProject.DT.data_structures.utilities;
 
-import myProject.DT.data_structures.tree.Tree;
+import myProject.DT.data_structures.Tree;
 import java.util.Arrays;
 import java.util.List;
 
 public class Trees {
+
+    public static int height(Tree root) {
+        if (root == null) return 0;
+
+        int lHeight = height(root.left);
+        int rHeight = height(root.right);
+
+        if (lHeight > rHeight) return lHeight+1;
+        else return rHeight+1;
+    }
+
+    public static void printLevelOrder(Tree root) {
+        int h = height(root);
+        for (int i = 1; i <= h; i++) {
+            System.out.print(i + ": ");
+            printCurrentLevel(root, i);
+            System.out.println();
+        }
+    }
+
+    public static void printCurrentLevel(Tree root, int level) {
+        if (root == null) return;
+        if (level == 1) {
+            System.out.print(root.val + " ");
+        } else if (level > 1) {
+            printCurrentLevel(root.left, level-1);
+            printCurrentLevel(root.right, level-1);
+        }
+    }
+
     public static String toString(Tree tree) {
         String b = "";
         if (tree == null) return "";

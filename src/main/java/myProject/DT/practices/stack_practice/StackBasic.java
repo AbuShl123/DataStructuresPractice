@@ -2,6 +2,7 @@ package myProject.DT.practices.stack_practice;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
+import java.util.Stack;
 
 public class StackBasic {
     public static void main(String[] args) {
@@ -26,5 +27,15 @@ public class StackBasic {
         System.out.println(queue);
         System.out.println(queue.poll());
         System.out.println(queue);
+
+        System.out.println("--------------------------------------");
+
+        Stack<Integer> realStack = new Stack<>();
+        realStack.push(1);
+        realStack.push(2);
+        realStack.push(3);
+        System.out.println(realStack);
+        System.out.println(realStack.pop());
+        System.out.println(realStack);
     }
 }

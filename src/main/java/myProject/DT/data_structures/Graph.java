@@ -1,4 +1,4 @@
-package myProject.DT.data_structures.graph;
+package myProject.DT.data_structures;
 
 import java.util.List;
 

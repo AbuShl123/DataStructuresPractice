@@ -1,4 +1,4 @@
-package myProject.DT.data_structures.linkedList;
+package myProject.DT.data_structures;
 
 public class ListNode {
     public int val;

@@ -1,6 +1,6 @@
 package myProject.DT.practices.tree_practice;
 
-import myProject.DT.data_structures.tree.Tree;
+import myProject.DT.data_structures.Tree;
 import myProject.DT.data_structures.utilities.Trees;
 
 import java.util.ArrayList;

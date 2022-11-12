@@ -1,4 +1,4 @@
-package myProject.DT.data_structures.tree;
+package myProject.DT.data_structures;
 
 public class Tree {
     public int val;
