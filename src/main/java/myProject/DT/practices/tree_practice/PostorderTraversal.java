@@ -21,6 +21,8 @@ public class PostorderTraversal {
         System.out.println(postorderIterate(root));
 
         System.out.println(getPostorderTraversalValues(root));
+
+        System.out.println(Trees.getPostorderValues(root, new ArrayList<>()));
     }
 
     public static String postorderIterate(Tree root) {
@@ -28,7 +30,7 @@ public class PostorderTraversal {
         return postorderIterate(root.left) + postorderIterate(root.right) + root.val + " ";
     }
 
-    private static List<Integer> list = new ArrayList<>();
+    private static final List<Integer> list = new ArrayList<>();
     public static List<Integer> getPostorderTraversalValues(Tree root) {
         if (root == null) return list;
 

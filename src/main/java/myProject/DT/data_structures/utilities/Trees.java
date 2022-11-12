@@ -1,8 +1,6 @@
 package myProject.DT.data_structures.utilities;
 
 import myProject.DT.data_structures.tree.Tree;
-
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -16,14 +14,20 @@ public class Trees {
         return b + toString(tree.left) + toString(tree.right);
     }
 
-    public static String printInPostorderTraversal(Tree root) {
+    public static String postorderIterate(Tree root) {
         if (root == null) return "";
-        return printInPostorderTraversal(root.left) +
-                printInPostorderTraversal(root.right) +
+        return postorderIterate(root.left) +
+                postorderIterate(root.right) +
                 root.val + " ";
     }
 
-
+    public static List<Integer> getPostorderValues(Tree root, List<Integer> list) {
+        if (root == null) return list;
+        getPostorderValues(root.left, list);
+        getPostorderValues(root.right, list);
+        list.add(root.val);
+        return list;
+    }
 
 
     public static int[] getLeafNodes(Tree tree) {
