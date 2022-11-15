@@ -44,6 +44,13 @@ public class Trees {
         return b + toString(tree.left) + toString(tree.right);
     }
 
+    public static Integer[] toArray(Tree root) {
+        int numberOfNodes = (int) (Math.pow(2, Trees.height(root))-1);
+        Integer[] arr = new Integer[numberOfNodes];
+
+        return null;
+    }
+
     public static String postorderIterate(Tree root) {
         if (root == null) return "";
         return postorderIterate(root.left) +
